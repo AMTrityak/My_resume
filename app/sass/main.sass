@@ -1,0 +1,698 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+
+
+
+
+
+
+
+
+
+
+
+#hanburger_menu
+    width: 50px
+    height: 30px
+    position: relative
+    margin: 0 auto
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .5s ease-in-out
+    -moz-transition: .5s ease-in-out
+    -o-transition: .5s ease-in-out
+    transition: .5s ease-in-out
+    cursor: pointer
+    z-index: 100
+
+
+#hanburger_menu span
+    display: block
+    position: absolute
+    height: 4px
+    width: 50px
+    background: #000
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .25s ease-in-out
+    -moz-transition: .25s ease-in-out
+    -o-transition: .25s ease-in-out
+    transition: .25s ease-in-out
+
+
+#hanburger_menu span:nth-child(1)
+    top: 0px
+
+
+#hanburger_menu span:nth-child(2),#hanburger_menu span:nth-child(3)
+    top: 10px
+
+
+#hanburger_menu span:nth-child(4)
+    top: 21px
+
+
+#hanburger_menu.open span:nth-child(1)
+    top: 22px
+    width: 0%
+    left: 50%
+
+
+#hanburger_menu.open span:nth-child(2)
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    transform: rotate(45deg)
+    background: #fff
+    top: 15px
+
+
+#hanburger_menu.open span:nth-child(3)
+    -webkit-transform: rotate(-45deg)
+    -moz-transform: rotate(-45deg)
+    -o-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+    background: #fff
+    top: 15px
+
+
+#hanburger_menu.open span:nth-child(4)
+    top: 18px
+    width: 0%
+    left: 50%
+
+
+.menu_block
+    background: #000
+    margin: 0
+    height: 100%
+    width: 0
+    opacity: 0
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    margin: 0
+    box-shadow: -4px 0px 20px 0px rgba(0,0,0, 0.5)
+    -webkit-transition: all 5s ease-in-out
+    -moz-transition: all 5s ease-in-out
+    -o-transition: all 5s ease-in-out
+    -ms-transition: all 5s ease-in-out
+    transition: all 0.5s ease-in-out
+
+
+.open_menu_block
+    opacity: 1
+    width: 400px
+
+
+.menu_list
+    margin-top: 100px
+    text-align: center
+    width: 0
+    padding: 0
+    opacity: 0
+
+
+.open_menu_list
+    opacity: 1
+    width: 100%
+
+
+.menu_list li
+    list-style: none
+    color: #fff
+    padding: 30px 10px
+    font-size: 26px
+    border-bottom: 0.5px solid gray
+    position: relative
+
+
+.menu_list a:nth-of-type(1) li
+    border-top: 1px solid gray
+
+
+.menu_list li:before
+    content: ''
+    position: absolute
+    width: 0
+    height: 100%
+    top: 0
+    left: 0
+    background: #fff
+    -webkit-transition: all 5s ease-in-out
+    -moz-transition: all 5s ease-in-out
+    -o-transition: all 5s ease-in-out
+    -ms-transition: all 5s ease-in-out
+    transition: all 0.5s ease-in-out
+    z-index: -1
+
+
+.menu_list li:hover
+    color: #000
+
+
+.menu_list li:hover:before
+    width: 100%
+
+.mouse_scroll
+    width: 30px
+    height: 50px
+    background: transparent
+    border-radius: 20px
+    border: 4px solid #000
+    position: absolute
+    bottom: 3%
+    right: 20px
+    animation: shake .4s linear alternate infinite
+
+
+
+
+
+
+
+.grid 
+    display: grid
+
+.img-responsive 
+    display: block 
+    max-width: 100%
+    height: auto 
+
+header 
+    min-height: 100vh
+    background-size: cover
+    background-position: center 
+    position: relative    
+    background-image: linear-gradient(to right, rgba(27, 216, 156, .65) 0%, rgba(33, 221, 212, .65) 100%), url(../img/header-bg.jpg)
+    
+.container 
+    max-width: 1200px 
+    margin: auto 
+    padding: 0 $gatter 
+
+    .block-social__items
+        text-align: left
+    .fa
+        margin-top: 40px
+        font-size: 24px 
+        color: #ffffff
+        padding: 0 10px
+           
+      
+    .block-social__button 
+        display: inline-block
+        float: right
+    
+    .header-content 
+        display: table-cell
+        vertical-align: middle
+        height: 80vh
+        color: #ffffff
+        h1 
+            font-size: 120px
+            font-family: 'OpenSansLight'
+            margin-bottom: 0
+            line-height: 1.2
+            font-weight: 100
+            span 
+                font-family: 'OpenSansBold'
+        h2 
+            font-family: 'OpenSansLight'
+            font-size: 28px
+            font-weight: 100
+
+.block-describe 
+    background-color: #22252c
+    .container 
+        grid-template-columns: 1fr 1fr
+        .block-describe__left           
+            align-items: center
+            
+            
+
+.block-describe__left__item-1
+    position: relative
+    max-height: 390px 
+    max-width: 390px
+    img 
+        margin-top: 200px 
+        position: relative
+        z-index: 2                  
+    &::before 
+        content: ''
+        display: block 
+        position: absolute
+        top: -12%
+        bottom: 6%
+        right: -12% 
+        left: 10%
+        border: 7px solid $main-color
+        z-index: 1
+
+.block-describe__left__item-2   
+    a 
+        display: block
+        max-width: 200px
+        background: $gradient
+        margin: 30px 100px 
+        line-height: 3.5
+        text-decoration: none
+        font-family: "OpenSansBold"
+        font-size: 14px
+        text-align: center
+        color: #ffffff
+        border-radius: 5px
+        box-shadow: 0 0 60px rgba(27,216,156,0.5)
+        padding: 2px 0
+        .fa 
+            margin-top: 0
+            font-size: 16px
+            
+        
+.block-describe__right__content 
+    margin-top: 130px    
+    h2 
+        text-transform: uppercase        
+        font-size: 45px
+        font-family: "OpenSansBold"
+        background: $gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: #0B2349
+        display: table        
+    p 
+        color: #ffffff
+        font-family: 'OpenSansLight'        
+    span 
+        color: $main-color
+        text-transform: uppercase
+        font-family: "OpenSansLight"
+        font-size: 18px
+        letter-spacing: 1.5px
+        font-weight: 800 
+        line-height: 2.1
+    
+.block_interests
+    background-color: #22252c
+    padding-bottom: 100px
+    h2 
+        margin-top: 150px
+        text-transform: uppercase        
+        font-size: 40px
+        font-family: "OpenSansBold"
+        background: $gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: #0B2349
+        display: table  
+
+.block_interests__items
+    grid-template-columns: repeat(6, 1fr)             
+    a 
+        display: block
+        text-decoration: none 
+        position: relative
+        width: 100px
+        height: 100px 
+        border: 3px solid $main-color 
+        border-radius: 50%
+        .fa
+            font-size: 44px    
+            display: block
+            position: relative          
+            margin-top: 24px 
+            text-align: center 
+            color: $main-color 
+        &:hover 
+            background-color: $main-color
+            transition: background .5s linear
+            .fa 
+                color: #ffffff
+        
+.education
+    grid-template-rows: repeat(4)
+    background-color: #313741
+    h2 
+        padding: 100px 0
+        text-transform: uppercase        
+        font-size: 40px
+        font-family: "OpenSansBold"
+        background: $gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: #0B2349
+        display: table  
+        margin: auto
+.block_cap 
+    margin: auto
+    .fa 
+        display: block 
+        height: 65px
+        width: 65px 
+        border: 3px solid $main-color 
+        border-radius: 50%
+        margin: auto 
+        line-height: 2.5
+        text-align: center
+        color: $main-color
+.education_item
+    grid-template-columns: repeat(2, 1fr)
+    height: 150px
+    p 
+        color: #ffffff
+        font-family: "OpenSansRegular"
+        font-size: 14px
+.education_item__left 
+    border-right: 5px solid $main-color
+    position: relative
+    &::before 
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0 
+        right: 0 
+        background-color: #313741
+        width: 30px
+        height: 30px 
+        border: 3px solid $main-color
+        border-radius: 50%
+        transform: translate(57%, 0)
+    &::after 
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        right: 0 
+        background-color: $main-color 
+        width: 10px
+        height: 10px 
+        border-radius: 50%
+        transform: translate(73%, -95%)
+
+.education_item__right
+    position: relative
+
+.education_item__left_describe_block
+    position: absolute
+    bottom: -10% 
+    right: 0
+    padding-right: 40px 
+    text-align: right   
+.education_item__right_describe_block
+    position: absolute
+    bottom: -10%
+    left: 0
+    padding-left: 40px
+    text-align: left
+.education_name     
+    h3 
+        text-transform: uppercase
+        color: $main-color 
+        font-size: 27px
+        font-family: "OpenSansBold"
+        margin: 0
+    p 
+        margin: 0
+        text-transform: uppercase
+.education_item_last_left
+    position: relative
+    border-right: 5px solid $main-color
+    height: 100px
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        right: 0 
+        background-color: $main-color 
+        width: 20px
+        height: 20px 
+        border-radius: 50%
+        transform: translate(64%, 6%)
+.education_item_last_right
+    height: 100px
+.last 
+    height: 100px
+
+.skills
+    background-color: #22252c
+    h2 
+        margin: auto        
+        padding: 200px 0 100px 0         
+        text-transform: uppercase        
+        font-size: 40px
+        font-family: "OpenSansBold"
+        background: $gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: #0B2349
+        display: table 
+.title
+     background-color:  #313741 
+
+.block_skills
+    height: 400px
+    background-color: black
+.skills_describe_block
+    grid-template-columns: repeat(3, 1fr)
+    padding: 100px 0 300px 0
+    grid-gap: $gatter
+.skills_describe_block_items
+    height: 340px
+    background-color: #313741
+    &:hover 
+        background-color: #05c7ae        
+        -webkit-transform: scale(1.2,1.2)
+        -webkit-transition-timing-function: ease-out
+        -webkit-transition-duration: 550ms
+        -moz-transform: scale(1.2,1.2)
+        -moz-transition-timing-function: ease-out
+        -moz-transition-duration: 550ms
+        h3
+            color: #000000
+        span 
+            opacity: .5
+.skills_describe_block_items_content
+    padding: 35px
+    span 
+        font-size: 38px 
+        font-family: "OpenSansBold"
+    h3 
+        font-size: 24px 
+        font-family:  "OpenSansBold"
+        color: $main-color
+        text-transform: uppercase
+    p 
+        font-size: 14px 
+        color: #ffffff
+        font-family: "OpenSansRegular"
+
+.myworks
+    background-color: #22252c
+    h2 
+        margin: auto
+        text-align: center
+        text-transform: uppercase        
+        font-size: 40px
+        font-family: "OpenSansBold"
+        background: $gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: #0B2349
+        display: table 
+        padding-bottom: 100px
+.myworks_block 
+    background-image: linear-gradient(to right, rgba(27, 216, 156, .65) 0%, rgba(33, 221, 212, .65) 100%), url(../img/bg_for_myworks.jpg)
+    background-size: cover
+    background-position: center 
+    position: relative   
+    grid-template-columns: repeat(3, 300px)
+    grid-template-rows: repeat(2, 300px)
+    grid-gap: $gatter
+    justify-content: center 
+    padding: 100px 0 100px 0
+.myworks_block_items
+    background-size: cover
+    background-position: center 
+    position: relative    
+    &:hover       
+        .myworks_block_items_content 
+            display: block            
+.myworks_block_items_content  
+    display: none
+    position: absolute
+    top: 0
+    left: 0 
+    right: 0 
+    bottom: 0
+    background: rgba(255,255,255,0.6)
+    margin: 15px
+    text-transform: uppercase
+    padding: 10px
+    h3
+        font-family: "OpenSans"
+        font-size: 135px 
+        font-weight: 100
+        margin: 0
+        text-align: center
+        color: $main-color
+        line-height: 1.1
+    h4 
+        font-size: 20px 
+        font-family: 'OpenSansBold'
+    p 
+        font-size: 14px 
+        font-family: 'OpenSansLight'
+        color: $main-color
+        font-weight: 900
+        margin: 0
+    &:hover 
+        display: block 
+        z-index: 10
+
+.hireme
+    background-color: #22252c
+    padding-top: 200px
+.hireme_block
+    background-color: #02cfb4  
+.hireme_block_content
+    grid-template-columns: minmax(auto, 900px) minmax(auto,300px)
+    
+    .fa       
+        font-size: 60px
+        color: #22252c
+        padding-right: 40px
+    h2         
+        font-size: 38px
+        font-family: 'OpenSansBold'
+        text-transform: uppercase
+        color: #22252c
+        margin: 0
+        padding-top: 60px
+    p 
+        font-size: 14px
+        color: #22252c
+        font-family: 'OpenSansBold'
+        text-align: center
+        margin: 0
+        padding-bottom: 60px
+        max-width: 600px 
+        margin: auto
+.hireme_block_content_button
+    a 
+        display: block
+        width: 200px
+        background-color: #22252c 
+        margin: 30px 100px 
+        line-height: 3
+        text-decoration: none
+        font-family: "OpenSansBold"
+        font-size: 18px
+        text-align: center
+        color: #02cfb4 
+        border-radius: 5px       
+        text-transform: uppercase
+        margin:  auto
+        margin-top: 140px
+
+.blog
+    background-color: #22252c
+    h2
+        margin: auto
+        text-align: center
+        text-transform: uppercase        
+        font-size: 40px
+        font-family: "OpenSansBold"
+        background: $gradient
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: #0B2349
+        display: table 
+        padding: 150px 0 100px 0
+    .load_href 
+        display: block
+        width: 180px 
+        background: $gradient        
+        line-height: 3.2
+        text-decoration: none
+        font-family: "OpenSansBold"
+        font-size: 14px
+        text-align: center
+        color: #ffffff               
+        text-transform: uppercase
+        margin: 60px auto 0 auto 
+       
+
+       
+
+.blog_block
+    grid-template-columns: repeat(3, minmax(auto, 360px))
+    justify-content: center
+    grid-gap: $gatter 
+    grid-template-rows: repeat(1, minmax(auto,520px))        
+.blog_block_item
+    grid-template-rows: repeat(1, minmax(auto,240px))
+    background-color: #313741
+.blog_block_item_content
+    padding: 15px 20px 30px 20px    
+    h3 
+        font-size: 18px 
+        font-family: 'OpenSansBold'
+        color: #02cfb4
+        margin: 0
+    span 
+        font-size: 12px 
+        color: #ffffff
+        font-family: 'OpenSansBold'
+    p 
+        font-size: 14px 
+        font-family: 'OpenSansLight'
+        color: #ffffff
+        text-align: justify
+    a 
+        display: block
+        width: 110px 
+        background: $gradient        
+        line-height: 3.2
+        text-decoration: none
+        font-family: "OpenSansBold"
+        font-size: 10px
+        text-align: center
+        color: #ffffff               
+        text-transform: uppercase
+        
+        
+            
+
+       
+       
+
+
+
+    
+              
+
+        
+
+    
+
+        
+
+
+@import "media" 
+
+        
+
+        
